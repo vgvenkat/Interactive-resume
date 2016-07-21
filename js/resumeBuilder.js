@@ -1,6 +1,7 @@
 /*
 This is empty on purpose! Your code to build the resume will go here.
  */
+var data = "%data%";
 var bio = {
     "name": "Venkat Ganesan",
     "role": "Web Developer",
@@ -15,22 +16,22 @@ var bio = {
     "skills": ["web developement", "occassional mobile app development"],
     "biopic": "https://s.gravatar.com/avatar/4a00ad50b74037039a24d64a1f4f8bcb?s=200",
     display: function() {
-        HTMLheaderName = HTMLheaderName.replace("%data%", bio.name);
-        HTMLheaderRole = HTMLheaderRole.replace("%data%", bio.role);
+        HTMLheaderName = HTMLheaderName.replace(data, bio.name);
+        HTMLheaderRole = HTMLheaderRole.replace(data, bio.role);
 
         $("#header").prepend(HTMLheaderRole).prepend(HTMLheaderName);
 
 
         HTMLcontactGeneric = HTMLcontactGeneric
             .replace("%contact%", "Google")
-            .replace("%data%", "Venkat Ganesan");
+            .replace(data, "Venkat Ganesan");
 
-        HTMLmobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
-        HTMLemail = HTMLemail.replace("%data%", bio.contacts.email);
-        HTMLtwitter = HTMLtwitter.replace("%data%", "<a href=" + bio.contacts.twitter + "> @vgkrish</a>");
-        HTMLgithub = HTMLgithub.replace("%data%", "<a href=" + bio.contacts.github + "> vgvenkat</a>");
-        HTMLblog = HTMLblog.replace("%data%", "<a href='blog.vgvenkataraman.com'>Blog Link</a>");
-        HTMLlocation = HTMLlocation.replace("%data%", bio.contacts.location);
+        HTMLmobile = HTMLmobile.replace(data, bio.contacts.mobile);
+        HTMLemail = HTMLemail.replace(data, bio.contacts.email);
+        HTMLtwitter = HTMLtwitter.replace(data, "<a href=" + bio.contacts.twitter + "> @vgkrish</a>");
+        HTMLgithub = HTMLgithub.replace(data, "<a href=" + bio.contacts.github + "> vgvenkat</a>");
+        HTMLblog = HTMLblog.replace(data, "<a href='blog.vgvenkataraman.com'>Blog Link</a>");
+        HTMLlocation = HTMLlocation.replace(data, bio.contacts.location);
 
         $("#topContacts").append(HTMLmobile).append(HTMLemail)
             .append(HTMLtwitter).append(HTMLgithub)
@@ -40,16 +41,16 @@ var bio = {
             .append(HTMLtwitter).append(HTMLgithub)
             .append(HTMLblog).append(HTMLlocation);
 
-        HTMLbioPic = HTMLbioPic.replace("%data%", bio.biopic);
-        HTMLwelcomeMsg = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
+        HTMLbioPic = HTMLbioPic.replace(data, bio.biopic);
+        HTMLwelcomeMsg = HTMLwelcomeMsg.replace(data, bio.welcomeMessage);
 
         $("#header").append(HTMLbioPic).append(HTMLwelcomeMsg);
 
         var skillSet = "";
         bio.skills.forEach(function(skill) {
-            skillSet += HTMLskills.replace("%data%", skill);
+            skillSet += HTMLskills.replace(data, skill);
         });
-        HTMLskillsStart = HTMLskillsStart.replace("%data%", skillSet);
+        HTMLskillsStart = HTMLskillsStart.replace(data, skillSet);
         $("#header").append(HTMLskillsStart);
 
     }
@@ -83,23 +84,23 @@ var education = {
         var HTMLonlineschoolStart = HTMLschoolStart;
         education.schools.forEach(function(school) {
 
-            schoolList += HTMLschoolName.replace("%data%", school.name);
-            schoolList += HTMLschoolDegree.replace("%data%", school.degree);
-            schoolList += HTMLschoolDates.replace("%data%", school.dates);
-            schoolList += HTMLschoolLocation.replace("%data%", school.location);
-            schoolList += HTMLschoolMajor.replace("%data%", school.majors);
+            schoolList += HTMLschoolName.replace(data, school.name);
+            schoolList += HTMLschoolDegree.replace(data, school.degree);
+            schoolList += HTMLschoolDates.replace(data, school.dates);
+            schoolList += HTMLschoolLocation.replace(data, school.location);
+            schoolList += HTMLschoolMajor.replace(data, school.majors);
         });
-        HTMLschoolStart = HTMLschoolStart.replace("%data%", schoolList);
+        HTMLschoolStart = HTMLschoolStart.replace(data, schoolList);
         $("#education").append(HTMLschoolStart);
 
         education.onlineCourses.forEach(function(course) {
 
-            onlineList += HTMLonlineTitle.replace("%data%", course.title);
-            onlineList += HTMLonlineSchool.replace("%data%", course.school);
-            onlineList += HTMLonlineDates.replace("%data%", course.dates);
-            onlineList += HTMLonlineURL.replace("%data%", course.url);
+            onlineList += HTMLonlineTitle.replace(data, course.title);
+            onlineList += HTMLonlineSchool.replace(data, course.school);
+            onlineList += HTMLonlineDates.replace(data, course.dates);
+            onlineList += HTMLonlineURL.replace(data, course.url);
         });
-        HTMLonlineschoolStart = HTMLonlineschoolStart.replace("%data%", onlineList);
+        HTMLonlineschoolStart = HTMLonlineschoolStart.replace(data, onlineList);
         $("#education").append(HTMLonlineClasses).append(HTMLonlineschoolStart);
     }
 };
@@ -121,14 +122,14 @@ var work = {
     display: function() {
         var workList = "";
         work.jobs.forEach(function(job) {
-            workList += HTMLworkEmployer.replace("%data%", job.employer);
-            workList += HTMLworkTitle.replace("%data%", job.title);
-            workList += HTMLworkDates.replace("%data%", job.dates);
-            workList += HTMLworkLocation.replace("%data%", job.location);
-            workList += HTMLworkDescription.replace("%data%", job.description);
+            workList += HTMLworkEmployer.replace(data, job.employer);
+            workList += HTMLworkTitle.replace(data, job.title);
+            workList += HTMLworkDates.replace(data, job.dates);
+            workList += HTMLworkLocation.replace(data, job.location);
+            workList += HTMLworkDescription.replace(data, job.description);
         });
 
-        HTMLworkStart = HTMLworkStart.replace("%data%", workList);
+        HTMLworkStart = HTMLworkStart.replace(data, workList);
         $("#workExperience").append(HTMLworkStart);
     }
 };
@@ -138,23 +139,27 @@ var projects = {
         "title": "Interactive resume",
         "dates": "July 2016",
         "description": "This is an interactive resume experiment.",
-        "images": "images/interactive_resume.jpg"
+        "images": ["images/interactive_resume.jpg"]
     }, {
         "title": "Responsive website",
         "dates": "June 2016",
         "description": "This is an updated responsive portfolio website.",
-        "images": "images/interactive_resume.jpg"
+        "images": ["images/interactive_resume.jpg"]
     }],
     display: function() {
         var projectList = "";
         projects.projects.forEach(function(project) {
-            projectList += HTMLprojectTitle.replace("%data%", project.title);
-            projectList += HTMLprojectDates.replace("%data%", project.dates);
-            projectList += HTMLprojectDescription.replace("%data%", project.description);
-            projectList += HTMLprojectImage.replace("%data%", project.images);
+            projectList += HTMLprojectTitle.replace(data, project.title);
+            projectList += HTMLprojectDates.replace(data, project.dates);
+            projectList += HTMLprojectDescription.replace(data, project.description);
+
+            project.images.forEach(function(picture) {
+                projectList += HTMLprojectImage.replace(data, picture);
+            });
+
 
         });
-        HTMLprojectStart = HTMLprojectStart.replace("%data%", projectList);
+        HTMLprojectStart = HTMLprojectStart.replace(data, projectList);
         $("#projects").append(HTMLprojectStart);
     }
 };
