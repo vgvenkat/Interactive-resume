@@ -2,18 +2,18 @@
 This is empty on purpose! Your code to build the resume will go here.
  */
 var bio = {
-    name: "Venkat Ganesan",
-    role: "Web Developer",
-    contacts: {
-        mobile: "email_is_better",
-        email: "vgkrish619_at_gmail",
-        github: "https://github.com/vgvenkat",
-        twitter: "https://twitter.com/vgkrish",
-        location: "San Francisco"
+    "name": "Venkat Ganesan",
+    "role": "Web Developer",
+    "contacts": {
+        "mobile": "email_is_better",
+        "email": "vgkrish619_at_gmail",
+        "github": "https://github.com/vgvenkat",
+        "twitter": "https://twitter.com/vgkrish",
+        "location": "San Francisco"
     },
-    welcomeMessage: "Hey There! Nice to see your interest in my profile.🎓",
-    skills: ["web developement", "occassional mobile app development"],
-    biopic: "https://s.gravatar.com/avatar/4a00ad50b74037039a24d64a1f4f8bcb?s=200",
+    "welcomeMessage": "Hey There! Nice to see your interest in my profile.🎓",
+    "skills": ["web developement", "occassional mobile app development"],
+    "biopic": "https://s.gravatar.com/avatar/4a00ad50b74037039a24d64a1f4f8bcb?s=200",
     display: function() {
         HTMLheaderName = HTMLheaderName.replace("%data%", bio.name);
         HTMLheaderRole = HTMLheaderRole.replace("%data%", bio.role);
@@ -56,26 +56,26 @@ var bio = {
 };
 
 var education = {
-    schools: [{
-        name: "SJSU",
-        location: "San Jose, CA",
-        degree: "Masters",
-        majors: ["Software Engineering"],
-        dates: "2012 - 2014",
-        url: "www.sjsu.edu"
+    "schools": [{
+        "name": "SJSU",
+        "location": "San Jose, CA",
+        "degree": "Masters",
+        "majors": ["Software Engineering"],
+        "dates": "2012 - 2014",
+        "url": "www.sjsu.edu"
     }, {
-        name: "Sastra University",
-        location: "TN, India",
-        degree: "Bachelors",
-        majors: ["Information and Communication Technology"],
-        dates: "2008 - 2012",
-        url: "www.sastra.edu"
+        "name": "Sastra University",
+        "location": "TN, India",
+        "degree": "Bachelors",
+        "majors": ["Information and Communication Technology"],
+        "dates": "2008 - 2012",
+        "url": "www.sastra.edu"
     }],
-    onlineCourses: [{
-        title: "Front-end Web Developer Nanodegree",
-        school: "Udacity",
-        dates: "April 2016 - August 2016",
-        url: "https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001"
+    "onlineCourses": [{
+        "title": "Front-end Web Developer Nanodegree",
+        "school": "Udacity",
+        "dates": "April 2016 - August 2016",
+        "url": "https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001"
     }],
     display: function() {
         var schoolList = "",
@@ -105,18 +105,18 @@ var education = {
 };
 
 var work = {
-    jobs: [{
-        employer: "Verizon",
-        title: "Senior Product Developer",
-        location: "Palo Alto,CA",
-        dates: "September 2014 - Present",
-        description: "Built interactive dashboards, webportals for big data, hybrid mobile apps."
+    "jobs": [{
+        "employer": "Verizon",
+        "title": "Senior Product Developer",
+        "location": "Palo Alto,CA",
+        "dates": "September 2014 - Present",
+        "description": "Built interactive dashboards, webportals for big data, hybrid mobile apps."
     }, {
-        employer: "VacayHero",
-        title: "Full Stack Developer",
-        location: "San Francisco,CA",
-        dates: "July 2014 - Sepetember 2014",
-        description: "Built webportals for customers and partners to upload and book room availability, scrapped CRMs to build availability calendars."
+        "employer": "VacayHero",
+        "title": "Full Stack Developer",
+        "location": "San Francisco,CA",
+        "dates": "July 2014 - Sepetember 2014",
+        "description": "Built webportals for customers and partners to upload and book room availability, scrapped CRMs to build availability calendars."
     }],
     display: function() {
         var workList = "";
@@ -134,16 +134,16 @@ var work = {
 };
 
 var projects = {
-    projects: [{
-        title: "Interactive resume",
-        dates: "July 2016",
-        description: "This is an interactive resume experiment.",
-        images: "images/interactive_resume.jpg"
+    "projects": [{
+        "title": "Interactive resume",
+        "dates": "July 2016",
+        "description": "This is an interactive resume experiment.",
+        "images": "images/interactive_resume.jpg"
     }, {
-        title: "Responsive website",
-        dates: "June 2016",
-        description: "This is an updated responsive portfolio website.",
-        images: "images/interactive_resume.jpg"
+        "title": "Responsive website",
+        "dates": "June 2016",
+        "description": "This is an updated responsive portfolio website.",
+        "images": "images/interactive_resume.jpg"
     }],
     display: function() {
         var projectList = "";
